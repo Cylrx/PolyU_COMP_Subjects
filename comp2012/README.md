@@ -7,7 +7,7 @@
 
 ## 💭 Comments:
 - Dr. Jeff rarely give A/A+. You would have to work extremely hard and achieve near full raw marks. 
-- It's difficult to learn anything through lectures. Just read PPT and take notes. 
+- It's difficult to learn anything through lectures. Just read PPT, take notes, Google, and ask AI
 
 **📚 Additional Resources:**
 - [My Private Notes](https://wangyq.notion.site/comp2012-discrete-mathematics)
