@@ -7,14 +7,14 @@
   - Easy for experienced competitive programmers (cf rating 2000+)
 - **Recommendation**: Compulsory
   
-**💭 Comments:**
+## 💭 Comments:
 - Course design has some discouraging aspects for algorithm beginners:
   + Assignment policy penalizes citing references, which discourages learning from external resources
   + Homework problems near impossible for beginners to solve independently, **yet** using references is discouraged
 - Merely practicing lab / course materials is insufficient. Robust programming skills are needed. The only way to achieve high marks during is to practice large quantity of competitive programming problems, which might not worth your time.
 - I recommend writing a "checker" (aka. 对拍) program before submitting your assignments. See [Oiwiki - 常见技巧：对拍](https://oi-wiki.org/contest/common-tricks/#%E5%AF%B9%E6%8B%8D)
 
-**📚 Additional Resources:**
+## 📚 Additional Resources:
 - [OI Wiki](https://oi-wiki.org/ds/): reference material for all kinds of algorithms / data structures
 - [Leetcode](https://leetcode.com):
   - For practicing specific algorithms / data structures.
