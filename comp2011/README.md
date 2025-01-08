@@ -8,7 +8,7 @@
 **💭 Comments:**
 - Course design has some discouraging aspects for algorithm beginners:
   + Assignment policy penalizes citing references, which discourages learning from external resources
-  + Homework problems are too challenging and near impossible for beginners to solve independently, **yet** using references is discouraged
+  + Homework problems near impossible for beginners to solve independently, **yet** using references is discouraged
 
 **📚 Additional Resources:**
 - [OI Wiki](https://oi-wiki.org/ds/): reference material for all kinds of algorithms / data structures
