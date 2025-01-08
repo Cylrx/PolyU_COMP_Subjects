@@ -7,7 +7,7 @@
 ## 💭 Comments:
 - Excellent lecturers (Prof. Li Jing & Prof. Wu Jibin)
 - Course content lacks systematic structure and coherence
-- Final exam heavily depends on calculator efficiency (might be different in the future):
+- Final exam heavily depends on calculator proficiency (might be different in the future):
   - With table-operation capable calculator: Can finish 30 minutes early
   - With basic calculator: May struggle to complete/check answers due to time pressure
 
