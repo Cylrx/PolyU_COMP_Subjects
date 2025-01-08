@@ -1,6 +1,6 @@
 # COMP4432 Machine Learning
 
-- **Personal Rating:** 9.5/10
+- **Personal Rating:** 8.5/10
 - **Final Grade:** A+
 - **Difficulty**: Medium (Easy if you have prior knowledge)
 - **Recommendation**: Highly recommend for those with some ML background
@@ -8,6 +8,7 @@
 **💭 Comments:**
 - Projects are engaging and rewarding, especially with proper preparation
 - High grades are achievable (I got A+ despite missing most quizzes, which cost me ~10 marks deduction)
+- Lecture slides skipped some pre-requisites. Solution: ask AI.
 
 **📚 Additional Resources:**
 - [Course Homepage](https://www4.comp.polyu.edu.hk/~cskchung/COMP4432/)
