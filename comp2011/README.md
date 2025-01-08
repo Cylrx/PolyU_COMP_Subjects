@@ -2,13 +2,16 @@
 
 - **Personal Rating:** 6.5/10
 - **Final Grade:** A+
-- **Difficulty**: Hard (Easy ~ Medium for those with competitive programming experience)
+- **Difficulty**: Hard
+  - Medium for those with some competitive programming experience (cf rating 1600~1800)
+  - Easy for experienced competitive programmers (cf rating 2000+)
 - **Recommendation**: Compulsory
   
 **💭 Comments:**
 - Course design has some discouraging aspects for algorithm beginners:
   + Assignment policy penalizes citing references, which discourages learning from external resources
   + Homework problems near impossible for beginners to solve independently, **yet** using references is discouraged
+- Merely practicing lab / course materials is insufficient. Robust programming skills are needed. The only way to achieve high marks is to practice large quantity of competitive programming problems, which might not worth your time.
 
 **📚 Additional Resources:**
 - [OI Wiki](https://oi-wiki.org/ds/): reference material for all kinds of algorithms / data structures
