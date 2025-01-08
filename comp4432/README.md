@@ -1,8 +1,8 @@
 # COMP4432 Machine Learning
 
-**Personal Rating:** 9.5/10 
-**Final Grade:** A+
-**Recommendation**: Highly recommend for those with some ML background
+- **Personal Rating:** 9.5/10
+- **Final Grade:** A+
+- **Recommendation**: Highly recommend for those with some ML background
 
 **💭 Comments:**
 - Projects are engaging and rewarding, especially with proper preparation
