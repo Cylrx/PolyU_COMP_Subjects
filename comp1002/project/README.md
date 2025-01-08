@@ -6,11 +6,12 @@
 - **Difficulty:** Easy
 
 **💭 Comments:**
-- For programming beginners: Practice [LeetCode](https://leetcode.com) problems to prepare for DomJudge assessments
+- For programming beginners: Practice contest style problems to prepare for DomJudge assessments (see below)
 - High grades (A/A+) are easily achievable (I got acceptable grades despite major mark deduction from missing project deadline)
 
 **📚 Additional Resources:**
-- [LeetCode](https://leetcode.com) - Practice programming problems
+- [LeetCode](https://leetcode.com) - Problems come with pre-written code structure (class/method templates). Complete beginners may miss learning basic syntax like input/output handling
+- [Codeforces](https://codeforces.com/) - Better for complete beginners as you write everything from scratch, including basic program structure and I/O
 
 ---
 
