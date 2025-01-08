@@ -1,0 +1,90 @@
+--- THE ALGORITHM ---
+
+1. Euler Sieve
+ - Implements Euler Sieve up to a predetermined limit
+ - Utilizes custom-implemented bitset to mark non-primes, reducing memory usage
+ - Employs 2-3-5 factorization to skip multiples of 2,3,5, enhancing constant time efficiency
+
+2. Store Primes
+ - Java has inherent restrictions when declaring large arrays due to memory fragmentation
+ - Therefore, primes are stored in a 2D array, with each row holding S = 2^20 primes
+ - Memory occupied by Euler Sieve is freed
+ - 2D array is expanded to JVM's maximum allowable size
+
+3. Eratosthenes Sieve
+ - Continues sieving from where Euler Sieve ended
+ - Sieves numbers in blocks of size S = 2^20
+ - For each block: 
+	- Initializes bitset to mark non-primes (Similar to Euler Sieve)
+	- Applies 2-3-5 wheel factorization to improve efficiency
+	- Stores primes if additional space remains from STEP 2
+	- Writes discovered primes to the file
+
+Additional Implementation Details for Efficiency: 
+- Pierre Dusart's bounds on the prime-counting function and the nth prime number are used for tighter approximation of required array size
+- Binary Search is used to find the maximum range for sieving given memory constraints (Solves the constraint equation: x + 8x / lnx < MEMORY_LIMIT)
+
+
+--- THEORETICAL ANALYSIS ---
+
+Let n = the limit the algorithm sieves up to
+
+Time Complexity: 
+
+ - Euler Sieve phase: O(n) 
+ - Block Sieve phase: O(n log log n)
+
+ - When n < 4e9, Euler Sieve predominantly determines runtime, thus O(n) dominates
+ - When n > 4e9, Eratosthenes Sieve gradually becomes dominant, thus O(n log log n) 
+
+
+Memory Complexity: 
+
+When n < 4e9 (Euler Sieve): 
+ - Storing prime numbers: O(π(n)), where π is the prime-counting function
+ - Marking prime numbers: O(n/B), where B = 64
+ - π(n) represents the prime-counting function 
+ - B equals 32 for 32-bit computers; 64 for 64-bit computers
+
+ - Explanation: 
+	- All discovered prime numbers are stored for Euler Sieve. Therefore, memory usage equals the count of prime numbers within n, given by the prime-counting function π(n). While π(n) is sometimes approximated as n/ln(n), more precise bounds are used in this implementation
+	- Since bitset is implemented, memory usage for marking n numbers as prime or non-prime is divided by 32 or 64 depending on the system architecture
+
+
+When n > 4e9 (Block Sieve): 
+ - Storing prime numbers: O(π(√n))
+ - Marking prime numbers: O(BLOCK_SIZE/B) = O(1), as both BLOCK_SIZE and B are constants
+
+ - Explanation: 
+	- To sieve up to n, only prime numbers up to √n need storage. Therefore, required memory is π(√n)
+	- Similar to Euler's Sieve, but since sieving occurs in blocks, memory requirement remains constant at BLOCK_SIZE/32 or 64
+
+
+Theoretical Limit: 
+
+Assuming 4GB of RAM, 
+ - Maximum storable prime numbers: 4GB/8Byte = 5e8
+ - Since the nth prime number p_n ∼ n ln n
+ - Therefore, the 500,000,000th prime number ≈ 5e8 * ln(5e8) ≈ 1e10
+ - Consequently, maximum achievable sieve limit ≈ (1e10)² = 1e20
+
+
+--- EMPIRICAL EVIDENCE ---
+
+Hardware: 
+ - Model: Macbook Pro 
+ - Chip: M1 Max
+ - Memory: 32GB
+
+Statistics: 
+ - Given 8GB (JVM) Heap Size, 
+ - Effective Utilization: 		4.874 GB for prime number storage
+ - Number of prime numbers stored: 	6.092 * 10^8
+ - Maximum prime number stored: 	1.358 * 10^10
+
+Empirical Results: 
+
+Upper Limit	Primes Found	Time Elapsed
+1e11		4,118,054,813	508.078 seconds
+1e10		455,052,511	44.653 seconds
+1e9		50,847,534	1.357 seconds

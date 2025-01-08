@@ -1,0 +1,32 @@
+# test1: 
+
+Answer:
+Yes, it compiles successfully.
+
+Output: 
+2.5.12.7.9.
+
+---
+
+# test2: 
+
+Answer: 
+Yes, it compiles successfully.
+
+Output: 
+1.11.14.5.3.7.9.15.18.
+
+---
+
+# test3:
+
+Answer: 
+No, it will not compiles successfully.
+The code is missing necessary `throws` clause. 
+
+Necessary code: 
+
+@Test
+public void test3() throws EA, EB {
+	...
+}
