@@ -10,7 +10,7 @@
 - High grades are achievable (I got A+ despite missing most quizzes, which cost me ~10 marks deduction)
 - Lecture slides skipped some pre-requisites. Solution: ask AI.
 
-![image](./TA-comment.png)
+![image](TA-comment.png)
 
 **📚 Additional Resources:**
 - [Course Homepage](https://www4.comp.polyu.edu.hk/~cskchung/COMP4432/)
