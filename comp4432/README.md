@@ -2,7 +2,7 @@
 
 - **Personal Rating:** 9.5/10
 - **Final Grade:** A+
-- **Difficulty**: Medium (Very easy if you have prior knowledge)
+- **Difficulty**: Medium (Easy if you have prior knowledge)
 - **Recommendation**: Highly recommend for those with some ML background
 
 **💭 Comments:**
