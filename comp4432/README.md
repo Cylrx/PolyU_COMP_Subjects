@@ -10,12 +10,8 @@
 **📚 Additional Resources:**
 - [Course Homepage](https://www4.comp.polyu.edu.hk/~cskchung/COMP4432/)
 - [Personal Study Notes](https://wangyq.notion.site/machine-learning-notes) (Topics covered include):
-  - PyTorch Implementation
-  - Statistical Learning Theory
-  - Deep Learning Fundamentals
-  - Convolutional Networks
-  - Recurrent Networks
-  - Key Concepts:
+  - Statistical Learning Theory 
+  - Fundamental Concepts:
     - KL Divergence & Cross Entropy
     - Information Theory & Entropy
     - Maximum Likelihood Estimation
