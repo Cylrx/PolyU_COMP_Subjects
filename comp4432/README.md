@@ -5,7 +5,7 @@
 
 **💭 Comments:**
 - Projects are engaging and rewarding, especially with proper preparation
-- Course has a forgiving grading scheme (achieved A+ despite missing most quizzes, ~10 marks)
+- Course has a forgiving grading scheme (achieved A+ despite missing most quizzes, which cost me ~10 marks deduction)
 
 **📚 Additional Resources:**
 - [Course Homepage](https://www4.comp.polyu.edu.hk/~cskchung/COMP4432/)
