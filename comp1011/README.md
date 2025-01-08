@@ -7,9 +7,11 @@
 
 **💭 Comments:**
 - Solve a few easy (800~1200 rating) problems on [Codeforces](https://codeforces.com/) every week with C++, and you should be able to get A+.
+- You might also want to practice a few Linked List problem if you find them challenging
 
 **📚 Additional Resources:**
-- [Codeforces](https://codeforces.com/) - Practice 800~1200 rating problems
+- [Codeforces](https://codeforces.com/) - Practice 800~1200 rating problems for general C++ skills
+- [Leetcode (Linked List)](https://leetcode.com/problem-list/linked-list/) - For practicing specific data structure (e.g., Linked List)
 
 ---
 
