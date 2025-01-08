@@ -5,14 +5,14 @@
 - **Difficulty**: Medium (Easy if you have prior knowledge)
 - **Recommendation**: Highly recommend for those with some ML background
 
-**💭 Comments:**
+# 💭 Comments:
 - High grades are achievable (I got A+ despite missing most quizzes, which cost me ~10 marks deduction)
 - Lecture slides skipped some pre-requisites. Solution: ask AI.
 - Projects can be highly engaging and rewarding (see below).
 
 ![image](TA-comment.jpg)
 
-**📚 Additional Resources:**
+# 📚 Additional Resources:
 - [Course Homepage](https://www4.comp.polyu.edu.hk/~cskchung/COMP4432/)
 - [Personal Study Notes](https://wangyq.notion.site/machine-learning-notes) (Topics covered include):
   - Statistical Learning Theory 
