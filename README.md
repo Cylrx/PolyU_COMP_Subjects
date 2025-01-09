@@ -5,7 +5,6 @@
 
 [![Academic](https://img.shields.io/badge/Status-Personal_Archive-blue.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
 [![Study Period](https://img.shields.io/badge/Study-2023--2025-orange.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
-[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects/pulls)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-black.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
 </div>
@@ -52,15 +51,9 @@ I'm sharing my work under these conditions:
 
 > These materials reflect my personal academic journey at PolyU. While I've done my best to ensure accuracy, they represent my own work and understanding. They are not official materials, and future course content may differ.
 
-## 🤝 Contributing
-
-Found an error or want to suggest improvements? Feel free to:
-- Open an issue
-- Submit a pull request
-
 ## 📬 Questions?
 
-If you need the source files for any materials or have questions about my experiences with these courses, please [open an issue](https://github.com/Cylrx/PolyU_COMP_Subjects/issues).
+If you need the source files for any materials or discovered any errors, please [open an issue](https://github.com/Cylrx/PolyU_COMP_Subjects/issues).
 
 <div align="center">
 
