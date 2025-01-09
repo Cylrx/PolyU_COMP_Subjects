@@ -51,29 +51,6 @@ I'm sharing my work under these conditions:
 
 > These materials reflect my personal academic journey at PolyU. While I've done my best to ensure accuracy, they represent my own work and understanding. They are not official materials, and future course content may differ.
 
-## 📄 LICENSE
-
-This repository is licensed under Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0).
-
-### What this means:
-
-- ✅ You are free to:
-  - View and download materials for personal reference
-  - Share and adapt the materials
-  - Use content for study and research purposes
-
-- ⚠️ Under these conditions:
-  - **Attribution** — Give credit to the original work
-  - **NonCommercial** — Materials cannot be used for commercial purposes
-  - **ShareAlike** — Modified materials must be shared under the same license
-
-- ❌ Not permitted:
-  - Using materials for academic submissions
-  - Commercial use or monetary gain
-  - Removing/modifying this license when sharing
-
-For the full license details, see [here](https://creativecommons.org/licenses/by-nc-sa/4.0/).
-
 ## 📬 Questions?
 
 If you need the source files for any materials or discovered any errors, please [open an issue](https://github.com/Cylrx/PolyU_COMP_Subjects/issues).
