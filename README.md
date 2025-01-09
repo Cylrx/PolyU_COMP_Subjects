@@ -4,7 +4,7 @@
 ### Personal Coursework & Notes During My Studies at PolyU
 
 [![Academic](https://img.shields.io/badge/Status-Personal_Archive-blue.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
-[![Study Period](https://img.shields.io/badge/Study-2022--2024-orange.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
+[![Study Period](https://img.shields.io/badge/Study-2023--2025-orange.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects/pulls)
 [![License: CC BY-NC-SA 4.0](https://img.shields.io/badge/License-CC%20BY--NC--SA%204.0-black.svg)](https://creativecommons.org/licenses/by-nc-sa/4.0/)
 
