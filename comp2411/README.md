@@ -13,6 +13,7 @@
 - Course content is comprehensive and logically structured
 
 ## 📚 Additional Resources:
+- [**👉 My Personal Notes 👈**](https://wangyq.notion.site/comp2411-database-system) - **Feel free to check it out!** 
 - [B+ Tree Visualization](https://bplustree.app/) - Interactive B+ Tree learning tool
 - [OIWiki - B+ Tree](https://oi-wiki.org/ds/bplus-tree/) - Comprehensive B/B+ Tree guide
 
