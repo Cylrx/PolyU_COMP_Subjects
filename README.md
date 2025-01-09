@@ -17,11 +17,11 @@ This is my personal collection of coursework, notes, and materials from the COMP
 ### Repository Structure
 ```
 subject-code/
-├── README.md          # My course review & resources
-├── cheatsheet/        # My study materials
-├── assignments/       # My assignment solutions
-├── project/           # My project work
-└── mypractice/        # Personal practice
+├── README.md       # Course review, tips, and additional resources
+├── cheatsheet/     # Examination-ready cheatsheets for open-book exams
+├── assignments/    # Assignment solutions from the coursework
+├── project/        # Project work and deliverables
+└── mypractice/     # Additional practice beyond standard coursework
 ```
 
 ### 📑 What You'll Find
