@@ -1,4 +1,4 @@
-# COMP2021 OBject Oriented Programming
+# COMP2021 Object Oriented Programming
 
 - **Personal Rating:** 8/10
 - **Final Grade:** A+
