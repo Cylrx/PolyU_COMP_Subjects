@@ -11,6 +11,7 @@
 - Personal approach: Self-studied primarily using [Computer Systems: A Programmer's Perspective](https://book.douban.com/subject/27000879/) with minimal lecture attendance.
 
 ## 📚 Additional Resources:
+- [**👉 My Personal Notes 👈**](https://wangyq.notion.site/comp1411-computer-systems) - **Feel free to check it out!**
 - [Computer Systems: A Programmer‘Perspective](https://book.douban.com/subject/27000879/)
 
 ---
