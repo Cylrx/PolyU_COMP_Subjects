@@ -15,7 +15,7 @@
 
 # 📚 Additional Resources:
 - [**👉 My Personal Notes 👈**](https://wangyq.notion.site/machine-learning-notes)
-  - **Important NOTE:** This material extends **beyond** the COMP4432 syllabus.
+  - **Important:** This material extends **beyond** the COMP4432 syllabus.
   - This is my personal exploration into ML that includes additional topics (e.g., theoretical proofs) not covered in the original lectures.
 - [Course Homepage](https://www4.comp.polyu.edu.hk/~cskchung/COMP4432/)
   
