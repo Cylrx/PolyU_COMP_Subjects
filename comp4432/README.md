@@ -6,6 +6,7 @@
 - **Recommendation**: Highly recommend for those with some ML background
 
 # 💭 Comments:
+- [Prof. Korris](https://web.comp.polyu.edu.hk/cskchung/) is amazing.
 - High grades are achievable (I got A+ despite missing most quizzes, which cost me ~10 marks deduction)
 - Lecture slides skipped some pre-requisites. Solution: ask AI.
 - Projects can be highly engaging and rewarding (see below).
