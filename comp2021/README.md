@@ -7,9 +7,9 @@
   
 # 💭 Comments:
 - Group project offers valuable hands-on experience:
-  + Take initiative in contributing to the codebase
-  + Code manually rather than using AI tools to build strong Java fundamentals
-  + Direct coding practice helps prepare for exams
+  + Take initiative and be the main contributor to your group's codebase
+  + Code manually, avoid AI tools to generate entire code blocks.
+  + ... this should prepare you for the final exam.
 - Course has many theoretical concepts - understand them through practical implementation
 - Final exam typically excludes GUI topics (Swing)
 
