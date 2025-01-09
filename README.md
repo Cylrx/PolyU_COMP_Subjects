@@ -1,4 +1,4 @@
-# PolyU_COMP_Subjects
+# PolyU COMP Subjects
 📚 A repository for Code / Reports / Notes on PolyU COMP Subjects
 
 # Notice
