@@ -3,8 +3,10 @@
 # 🎓 My PolyU COMP Journey
 ### Personal Coursework & Notes from My Studies at PolyU
 
-[![Academic](https://img.shields.io/badge/Status-Personal_Archive-blue.svg)](https://github.com/your-username/your-repo)
-[![Study Period](https://img.shields.io/badge/Study-2022--2024-orange.svg)](https://github.com/your-username/your-repo)
+[![Academic](https://img.shields.io/badge/Status-Personal_Archive-blue.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
+[![Study Period](https://img.shields.io/badge/Study-2022--2024-orange.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects/pulls)
 
 </div>
 
