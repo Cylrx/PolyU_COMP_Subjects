@@ -6,7 +6,7 @@
 - **Difficulty:** Medium
   
 ## 💭 Comments:
-- Despite common perceptions, [Prof. Zhou Kai](https://www4.comp.polyu.edu.hk/~kaizhou/)'s lectures are informative and well-structured imo. He is also responsive to my questions and clarifies doubts effectively.
+- Despite common perceptions, I find [Prof. Zhou Kai](https://www4.comp.polyu.edu.hk/~kaizhou/)'s lectures informative and well-structured. He is also responsive to my questions and clarifies doubts effectively.
 - The course content is extensive, comparable to or exceeding COMP2411, but individual concepts are relatively straightforward. Taking thorough notes and ensuring comprehension of each topic is essential for success.
 - I found this course particularly engaging, though it might just be influenced by it being my first exposure to low-level concepts.
 
