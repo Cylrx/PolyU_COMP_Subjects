@@ -13,17 +13,11 @@
 ![image](TA-comment.jpg)
 
 # 📚 Additional Resources:
+- [**👉 My Personal Notes 👈**](https://wangyq.notion.site/machine-learning-notes)
+  - **Important NOTE:** This material extends **beyond** the COMP4432 syllabus.
+  - This is my personal exploration into ML that includes additional topics (e.g., theoretical proofs) not covered in the original lectures.
 - [Course Homepage](https://www4.comp.polyu.edu.hk/~cskchung/COMP4432/)
-- [Personal Study Notes](https://wangyq.notion.site/machine-learning-notes) (Topics covered include):
-  - Statistical Learning Theory 
-  - Fundamental Concepts:
-    - KL Divergence & Cross Entropy
-    - Information Theory & Entropy
-    - Maximum Likelihood Estimation
-    - Bernoulli Likelihood
-
-Note: Some resources may be in Chinese/English
-
+  
 ---
 
 # Notice
