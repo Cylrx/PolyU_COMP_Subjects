@@ -1,6 +1,6 @@
 # COMP2011 Data Structure
 
-- **Personal Rating:** 6.5/10
+- **Personal Rating:** 7/10
 - **Final Grade:** A+
 - **Difficulty**: Hard
   - Medium for those with some competitive programming experience (cf rating 1600~1800)
