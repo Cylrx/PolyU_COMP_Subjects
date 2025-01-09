@@ -1,7 +1,7 @@
 <div align="center">
 
 # 🎓 My PolyU COMP Subjects
-### Personal Coursework & Notes from My Studies at PolyU
+### Personal Coursework & Notes During My Studies at PolyU
 
 [![Academic](https://img.shields.io/badge/Status-Personal_Archive-blue.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
 [![Study Period](https://img.shields.io/badge/Study-2022--2024-orange.svg)](https://github.com/Cylrx/PolyU_COMP_Subjects)
