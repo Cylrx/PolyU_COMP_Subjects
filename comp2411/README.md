@@ -3,7 +3,7 @@
 - **Personal Rating:** 8.5/10
 - **Final Grade:** A-
 - **Recommendation:** Compulsory
-- **Difficulty:** Easy
+- **Difficulty:** Medium
   
 ## 💭 Comments:
 - Attendance is crucial - in-class exercises affect final grade significantly (I missed 3 exercises, led to A- instead of A)
