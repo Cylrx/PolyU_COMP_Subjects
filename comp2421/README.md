@@ -12,7 +12,9 @@
 
 ## 📚 Additional Resources:
 - [**👉 My Personal Notes 👈**](https://wangyq.notion.site/comp2421-computer-organization) - **Feel free to check it out!** 
-- [MIPS Reference Sheet](https://github.com/user-attachments/files/18357329/ucb-mips-reference-sheet.pdf) - A comprehensive MIPS reference guide from the University of California, Berkeley. This valuable resource is **no longer available online**.
+- [MIPS Reference Sheet](https://github.com/user-attachments/files/18357329/ucb-mips-reference-sheet.pdf)
+  - A comprehensive MIPS reference guide from the University of California, Berkeley.
+  - This valuable resource is **no longer available online**.
 
 ---
 
