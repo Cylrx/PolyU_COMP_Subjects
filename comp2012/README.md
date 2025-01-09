@@ -10,7 +10,7 @@
 - It's difficult to learn anything through lectures. Just read PPT, take notes, Google, and ask AI
 
 **📚 Additional Resources:**
-- [**👉 My Personal Notes 👈**]((https://wangyq.notion.site/comp2012-discrete-mathematics) - **Feel free to check it out!**
+- [**👉 My Personal Notes 👈**](https://wangyq.notion.site/comp2012-discrete-mathematics) - **Feel free to check it out!**
 
 ---
 
