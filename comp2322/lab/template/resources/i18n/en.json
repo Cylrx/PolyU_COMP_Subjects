@@ -1,0 +1,12 @@
+{
+  "mentor": "Lecturer",
+  "mentor_plural": "Lecturers",
+  "author": "Author",
+  "author_plural": "Authors",
+  "academic_year": "Academic year",
+
+  "figures_table": "Table of figures",
+  "tables_table": "Table of tables",
+
+  "chapter": "Chapter"
+}
