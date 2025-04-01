@@ -1,3 +1,8 @@
+**VIEWING OPTIONS**
+
+- **YouTube (English Subtitles):**  
+  https://www.youtube.com/watch?v=O7-TR4ttMrw  
+
 **TECHNICAL SPECIFICATIONS**
 
 Video File: 'master-en-dolby.mov'  
@@ -5,17 +10,6 @@ Video File: 'master-en-dolby.mov'
 - Audio: Dolby Digital Plus (E-AC-3) for cinema-grade immersive surround sound  
 - Video: H.264-encoded, high bitrate
 - Compatibility: Fully supported by modern media players and devices  
-
-**VIEWING OPTIONS**
-
-For optimal playback, we recommend using the native file. 
-
-However, Should compatibility issues arise, access the project via these platforms:  
-
-- **YouTube (English Subtitles):**  
-  https://www.youtube.com/watch?v=O7-TR4ttMrw  
-- **BiliBili (Chinese Subtitles):**  
-  https://www.bilibili.com/video/BV1n2QSYjEUV/  
 
 **PROJECT HIGHLIGHTS**
 
