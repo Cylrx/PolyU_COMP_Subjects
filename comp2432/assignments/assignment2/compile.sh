@@ -1,0 +1,1 @@
+gcc playGame.c -o playGame -Wall -Wconversion -Wshadow -Wextra -O2
