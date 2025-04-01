@@ -1,3 +1,18 @@
+**YouTube (English Subtitles):**  
+  https://www.youtube.com/watch?v=O7-TR4ttMrw  
+
+---
+
+**INTRODUCTION**
+
+_Synopsis_
+
+In 2062, humanity's leap into AGI splits the world apart. LibreAI, an open-source initiative advocating transparency and collaborative AI safeguards, sees its laboratories burned to the ground during anti-tech riots. Amid the turmoil, tech conglomerate Oblivix Inc. exploits public panic to push through laws monopolizing AI under the guise of "safety." As society applauds LibreAI's downfall, Oblivix's master plan silently initiates.
+
+_Director's Statement_
+
+This narrative mirrors real-world battles over AI governance, particularly recent regulatory pushes by organizations like OpenAI. Through Oblivix's calculated power grab, we interrogate how corporations weaponize existential fears to monopolize progress. The true crisis emerges not from rogue algorithms, but from humanity surrendering its future to boardroom oligarchs.
+
 **TECHNICAL SPECIFICATIONS**
 
 Video File: 'master-en-dolby.mov'  
@@ -5,17 +20,6 @@ Video File: 'master-en-dolby.mov'
 - Audio: Dolby Digital Plus (E-AC-3) for cinema-grade immersive surround sound  
 - Video: H.264-encoded, high bitrate
 - Compatibility: Fully supported by modern media players and devices  
-
-**VIEWING OPTIONS**
-
-For optimal playback, we recommend using the native file. 
-
-However, Should compatibility issues arise, access the project via these platforms:  
-
-- **YouTube (English Subtitles):**  
-  https://www.youtube.com/watch?v=O7-TR4ttMrw  
-- **BiliBili (Chinese Subtitles):**  
-  https://www.bilibili.com/video/BV1n2QSYjEUV/  
 
 **PROJECT HIGHLIGHTS**
 
