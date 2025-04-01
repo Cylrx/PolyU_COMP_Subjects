@@ -1,0 +1,1 @@
+gcc -I./src src/SPMS.c src/opti.c src/rng.c src/input.c src/output.c src/scheduler.c src/utils.c src/vector.c src/segtree.c src/state.c -o SPMS -Wall -Wextra -Wshadow -Wconversion  -D_GLIBCXX_DEBUG -D_GLIBCXX_DEBUG_PEDANTIC -O2 -lm
