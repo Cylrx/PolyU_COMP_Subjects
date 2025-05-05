@@ -1,0 +1,128 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f9f9f9;
+  color: #555;
+  line-height: 1.6;
+  padding: 30px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+h1 {
+  color: #5a8ab0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+h2 {
+  color: #6c7580;
+  margin: 25px 0 15px 0;
+  padding-left: 10px;
+  border-left: 3px solid #8ab0c5;
+  background-color: #f0f2f5;
+  padding: 8px 12px;
+  border-radius: 0 3px 3px 0;
+}
+
+p {
+  margin-bottom: 20px;
+  color: #666;
+}
+
+ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+li {
+  margin: 10px 0;
+  padding: 8px 12px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  transition: transform 0.2s;
+  border: 1px solid #f0f0f0;
+}
+
+li:hover {
+  transform: translateX(3px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+a {
+  color: #6d9ebe;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: #4e7d9d;
+  text-decoration: underline;
+}
+
+input[type="text"] {
+  padding: 10px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 3px;
+  margin-right: 10px;
+  width: 300px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  color: #666;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #8ab0c5;
+  box-shadow: 0 0 0 2px rgba(138, 176, 197, 0.15);
+}
+
+button {
+  background-color: #8ab0c5;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.2s;
+}
+
+button:hover {
+  background-color: #7aa0b5;
+}
+
+button:active {
+  background-color: #6991a6;
+}
+
+.custom-input {
+  margin-bottom: 30px;
+}
+
+div {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
+  
+  input[type="text"] {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Multi-threaded HTTP Server</title>
+        <link rel="stylesheet" href="/resources/style.css">
+    </head>
+    <body>
+        <h1>Multi-threaded HTTP Server Playground</h1>
+        <p>Enter a path to test the server:</p>
+        <div class="custom-input">
+            <input type="text" id="pathInput" placeholder="Enter path to test">
+            <button onclick="testPath()">Test Path</button>
+        </div>
+        <div>
+            <p> Or, click any of the following links to test the server: </p>
+            <h2> Test 1: 200 OK - Different file types </h2>
+            <ul>
+                <li><a href="/resources/index.html">/resources/index.html (TEXT)</a></li>
+                <li><a href="/resources/big.txt">/resources/big.txt (TEXT) 6MB txt file</a></li>
+                <li><a href="/resources/cat.jpg">/resources/cat.jpg (IMAGE)</a></li>
+                <li><a href="/resources/dog.webp">/resources/dog.webp (IMAGE)</a></li>
+            </ul>
+
+            <h2> Test 2: 415 Unsupported Media Type </h2>
+            <ul>
+                <li><a href="/resources/project.pdf">/resources/project.pdf (PDF) </a></li>
+            </ul>
+
+            <h2> Test 3: 403 Forbidden </h2>
+            <ul>
+                <li><a href="/secrets/secret.txt">/secrets/secret.txt (TEXT) </a></li>
+                <li><a href="/secrets/secret.jpeg">/secrets/secret.jpeg (IMAGE) </a></li>
+                <li><a href="/secrets/public.txt">/secrets/public.txt (TEXT) </a></li>
+                <li><a href="/secrets/private.txt">/secrets/private.txt (TEXT) </a></li>
+            </ul>
+
+            <h2> Test 4: 404 Not Found </h2>
+            <ul>
+                <li><a href="/resources/nonexistent.txt">/resources/nonexistent.txt (TEXT) </a></li>
+                <li><a href="/resources/nonexistent.jpeg">/resources/nonexistent.jpeg (IMAGE) </a></li>
+                <li><a href="/resources/nonexistent.webp">/resources/nonexistent.webp (IMAGE)</a></li>
+            </ul>
+            
+            <h2> Test 5: 400 Bad Request </h2>
+            <ul>
+                <li><a href="/resources/??..bad_path.h.1.2">/resources/??..bad_path.h.1.2 (TEXT)</a></li>
+            </ul>
+        </div>
+
+        <script>
+            function testPath() {
+                const path = document.getElementById("pathInput").value;
+                window.location.href = path;
+            }
+        </script>
+    </body>
+</html>
