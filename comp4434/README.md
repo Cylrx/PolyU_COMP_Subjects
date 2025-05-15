@@ -17,7 +17,6 @@
 ## 📚 Additional Resources:
 - If GPU resources are insufficient for the group project, consider https://www.autodl.com/, the cloud platform I used.
 
-
 ---
 
 # Notice
