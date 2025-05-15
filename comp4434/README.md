@@ -1,15 +1,20 @@
 # COMP4434 Big Data
 
-- **Personal Rating:** In Progress
-- **Final Grade:** In Progress
+- **Personal Rating:** 8.5/10
+- **Final Grade:** A+
 - **Recommendation:** N/A
-- **Difficulty:** In Progress
+- **Difficulty:** Medium (Low if experienced in ML)
 
 ## 💭 Comments:
-- In Progress
+- Relatively light workload overall
+- Start group project early as deep learning model training can take time
+- Lenient grading (easy to argue marks back)
+- Final exam questions follow a consistent pattern; practicing past papers is sufficient to perform well
+- Prof. Huang Xiao is very responsive to messages
 
 ## 📚 Additional Resources:
-- In Progress
+- If GPU resources are insufficient for the group project, consider https://www.autodl.com/, the cloud platform I used.
+
 
 ---
 
