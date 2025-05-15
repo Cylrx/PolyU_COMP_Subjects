@@ -5,6 +5,8 @@
 - **Recommendation:** N/A
 - **Difficulty:** Medium (Low if experienced in ML)
 
+![image](grades.jpg)
+
 ## 💭 Comments:
 - Relatively light workload overall
 - Start group project early as deep learning model training can take time
