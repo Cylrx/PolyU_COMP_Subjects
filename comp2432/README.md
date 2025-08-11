@@ -14,10 +14,6 @@
 
 Due to this conduct, this was unequivocally the worst course experience I have had at PolyU.
 
-
-## 📚 Additional Resources:
-- In Progress
-
 ---
 
 # Notice
