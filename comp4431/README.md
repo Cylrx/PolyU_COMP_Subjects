@@ -2,7 +2,7 @@
 
 - **Personal Rating:** 6.5/10
 - **Final Grade:** A
-- **Recommendation:** Fluff course (水课)
+- **Recommendation:** Fluff course (水课，但好拿分)
 - **Difficulty:** Easy
 
 ## 💭 Comments:
