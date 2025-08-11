@@ -1,15 +1,18 @@
 # COMP2322 Computer Networking
 
-- **Personal Rating:** In Progress
-- **Final Grade:** In Progress
+- **Personal Rating:** 8/10
+- **Final Grade:** A+
 - **Recommendation:** Compulsory
-- **Difficulty:** In Progress
+- **Difficulty:** Medium
 
 ## 💭 Comments:
-- In Progress
+- Professor Lou is an excellent instructor—very responsive, supportive, and professional. He is quick to resolve any grading discrepancies.
+- The final exam is very predictable. The single most effective strategy is to drill the past papers.
+
 
 ## 📚 Additional Resources:
-- In Progress
+- To aid with studying for the final, I wrote a Python script that automatically verifies solutions for **Longest Prefix Matching** problems. It's a great tool for checking your practice work.
+	- Link: https://github.com/Cylrx/PolyU_COMP_Subjects/tree/main/comp2322/cheatsheet
 
 ---
 

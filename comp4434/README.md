@@ -2,7 +2,7 @@
 
 - **Personal Rating:** 8.5/10
 - **Final Grade:** A+
-- **Recommendation:** N/A
+- **Recommendation:** Yes, if you want free GPA
 - **Difficulty:** Medium (Low if experienced in ML)
 
 ![image](grades.jpg)

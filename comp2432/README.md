@@ -1,12 +1,19 @@
 # COMP2432 Operating System
 
-- **Personal Rating:** In Progress
-- **Final Grade:** In Progress
+- **Personal Rating:** 3/10
+- **Final Grade:** A-
 - **Recommendation:** Compulsory
-- **Difficulty:** In Progress
+- **Difficulty:** Easy ~ Medium
 
 ## 💭 Comments:
-- In Progress
+-   **Flawed Assessments:** Exam questions are often highly ambiguous or test on material **never mentioned in the lectures**. When this was raised, the instructor's response was that students should have been able to "just guess" the answers.
+
+-   **Hostility Towards Feedback:** Raising valid concerns can lead to punitive action. I personally experienced this twice:
+    1.  When I inquired about several poorly defined midterm questions, my concerns were dismissed. Instead, the instructor re-examined unrelated problems on my paper and retroactively lowered my score （**倒扣分**）, using the pretext of correcting "lenient grading"—a standard he had already admitted was applied to the entire class.
+    2.  When my group pointed out a clear error in the **official project solution** that affected the entire class, we were threatened with a **10+ point grade reduction** for bringing it up.
+
+Due to this conduct, this was unequivocally the worst course experience I have had at PolyU.
+
 
 ## 📚 Additional Resources:
 - In Progress
