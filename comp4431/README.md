@@ -2,12 +2,10 @@
 
 - **Personal Rating:** 6.5/10
 - **Final Grade:** A
-- **Recommendation:** Fluff course (水课)
+- **Recommendation:** Fluff course (水课，但好拿分)
 - **Difficulty:** Easy
 
 ## 💭 Comments:
-- ML concepts taught in this class is extremely easy. The hardest concept is Alpha-beta pruning, which did not even appear in the finals 
-- The major workload of this class involves creating an AI video, which can be boring to some people. I personally enjoy film making, so it was okay. 
 
 - **On the Concepts**: The curriculum covers fundamental ML principles but doesn't go deep into complex theory. The difficulty peaks with topics like Alpha-beta pruning, which ultimately wasn't tested on our final. You shouldn't need to spend much effort revising materials. 
 - **On the Workload**: The primary assignment is creating an AI-themed video, which accounts for a major portion of the workload. This was a highlight for me as I enjoy creative projects. However, if you're looking for a class heavy on technical problem-solving or coding, be aware that the focus here is different.

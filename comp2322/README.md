@@ -12,7 +12,7 @@
 
 ## 📚 Additional Resources:
 - To aid with studying for the final, I wrote a Python script that automatically verifies solutions for **Longest Prefix Matching** problems. It's a great tool for checking your practice work.
-	- Link: https://github.com/Cylrx/PolyU_COMP_Subjects/tree/main/comp2322/cheatsheet
+	- Link: [longest-prefix-match-checker.py](https://github.com/Cylrx/PolyU_COMP_Subjects/blob/main/comp2322/longest-prefix-match-checker.py)
 
 ---
 
