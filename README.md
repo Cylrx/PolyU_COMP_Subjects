@@ -58,6 +58,6 @@ If you need the source files for any materials or discovered any errors, please 
 <div align="center">
 
 ---
-Made with ❤️ by a Cylrx
+Made with ❤️ by Cylrx
 
 </div>
