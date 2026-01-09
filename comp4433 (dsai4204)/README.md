@@ -1,6 +1,6 @@
 # COMP4433 Data Mining
 
-- **Personal Rating:** /10
+- **Personal Rating:** 9/10
 - **Final Grade:** A+
 - **Difficulty**: Easy
 - **Recommendation**: Highly recommend for those who want an easy A
