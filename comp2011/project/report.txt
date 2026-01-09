@@ -86,5 +86,5 @@ Empirical Results:
 
 Upper Limit	Primes Found	Time Elapsed
 1e11		4,118,054,813	508.078 seconds
-1e10		455,052,511	44.653 seconds
-1e9		50,847,534	1.357 seconds
+1e10		455,052,511		44.653 seconds
+1e9			50,847,534		1.357 seconds
