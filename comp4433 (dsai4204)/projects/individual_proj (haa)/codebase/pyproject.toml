@@ -1,0 +1,48 @@
+[project]
+name = "heartattackanalysis"
+version = "0.1.0"
+description = "Heart Attack Analysis Dataset (Cleveland)"
+authors = [
+    {name = "Cylrx",email = ""}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "colorama>=0.4.6",
+    "einops>=0.8.1",
+    "flash-attn",
+    "huggingface-hub>=1.2.3",
+    "hyperopt>=0.2.7",
+    "imodels>=2.0.4",
+    "kditransform>=1.2.0",
+    "langchain-core>=1.2.4",
+    "langchain-google-genai>=4.1.2",
+    "langchain-openai>=1.1.6",
+    "matplotlib>=3.10.8",
+    "mlxtend>=0.23.4",
+    "networkx>=3.6.1",
+    "numpy>=2.3.5",
+    "pandas>=2.3.3",
+    "pysubgroup>=0.8.0",
+    "scikit-learn>=1.6.1",
+    "scipy>=1.16.3",
+    "tabpfn>=6.0.6",
+    "tabpfn-extensions[all]",
+    "torch==2.7.1",
+    "torchaudio==2.7.1",
+    "torchvision==0.22.1",
+    "tqdm>=4.67.1",
+    "typing-extensions>=4.15.0",
+    "umap-learn>=0.5.9.post2",
+    "xgboost>=3.1.2",
+]
+
+[tool.uv.sources]
+tabpfn-extensions = { git = "https://github.com/PriorLabs/tabpfn-extensions.git" }
+flash-attn = { path = "flash_attn-2.8.0.post2+cu12torch2.7cxx11abiTRUE-cp312-cp312-linux_x86_64.whl" }
+
+[tool.uv.workspace]
+members = [
+    "temp_test",
+]

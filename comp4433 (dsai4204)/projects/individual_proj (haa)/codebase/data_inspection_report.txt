@@ -1,0 +1,42 @@
+DATA INSPECTION REPORT
+======================
+
+Target Variable Analysis:
+-------------------------
+We analyzed the correlation between the 'output' variable and key clinical indicators to determine its true meaning.
+
+1. ST Depression (oldpeak):
+   - output=0 mean: 1.58 (High depression -> Ischemia/Disease)
+   - output=1 mean: 0.58 (Low depression -> Normal)
+   -> Indicates output=0 is Disease, output=1 is Healthy.
+
+2. Max Heart Rate (thalachh):
+   - output=0 mean: 139.1 (Lower HR -> Compromised)
+   - output=1 mean: 158.5 (Higher HR -> Healthy)
+   -> Indicates output=0 is Disease, output=1 is Healthy.
+
+3. Exercise Induced Angina (exng):
+   - output=0 mean: 0.55 (55% have angina -> Disease)
+   - output=1 mean: 0.14 (14% have angina -> Healthy)
+   -> Indicates output=0 is Disease, output=1 is Healthy.
+
+4. Major Vessels Colored (caa):
+   - output=0: High frequency of non-zero values (Calcification present)
+   - output=1: Predominantly 0 (No calcification)
+   -> Indicates output=0 is Disease, output=1 is Healthy.
+
+CONCLUSION:
+The dataset label is INVERTED relative to the provided description.
+output=1 corresponds to "Less Chance of Heart Attack" (Healthy).
+output=0 corresponds to "More Chance of Heart Attack" (Disease).
+
+Interpretation of your Mining Results:
+--------------------------------------
+Your Subgroup Discovery targeted 'output=1'.
+Therefore, you were discovering rules for "Health", not "Risk".
+
+- Rule "exng==0" -> output=1: "No Angina -> Healthy". (Correct)
+- Rule "caa==0" -> output=1: "No Calcification -> Healthy". (Correct)
+- Rule "cp==0" (Typical Angina) -> output=0 (Low prob of 1): "Typical Angina -> Disease". (Correct)
+
+

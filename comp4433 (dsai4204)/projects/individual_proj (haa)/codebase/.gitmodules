@@ -1,0 +1,3 @@
+[submodule "LimiX"]
+	path = LimiX
+	url = https://github.com/Cylrx/LimiX.git

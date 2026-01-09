@@ -1,0 +1,11 @@
+.DS_STORE
+experiment/
+__pycache__/
+poetry.lock
+.venv
+*.whl
+cache/
+output/
+.cursor/
+*.pdf
+.vscode/

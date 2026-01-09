@@ -24,7 +24,7 @@
 #let def(x, y, g: 1em) = {grid(columns: 2, gutter: g, [#set text(style: "italic"); #x], [#y])}
 
 #columns(3, gutter: 6pt)[
-#highlight[*Name*: WANG Yuqi *Student ID*: 23110134D]
+#highlight[*Name*: WANG Yuqi *Student ID*: [redacted]]
 
 #head([Introduction])
 

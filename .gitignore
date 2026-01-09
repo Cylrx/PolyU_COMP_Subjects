@@ -36,6 +36,9 @@ $RECYCLE.BIN/
 
 # === Development Environment Files ===
 
+.claude
+.cursor
+
 # IntelliJ IDEA
 .idea/
 *.iml

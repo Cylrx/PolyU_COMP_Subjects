@@ -1,6 +1,6 @@
 # COMP4432 Machine Learning
 
-- **Personal Rating:** 8.5/10
+- **Personal Rating:** 9/10
 - **Final Grade:** A+
 - **Difficulty**: Medium (Easy if you have prior knowledge)
 - **Recommendation**: Highly recommend for those with some ML background
@@ -17,6 +17,7 @@
 - [**👉 My Personal Notes 👈**](https://wangyq.notion.site/machine-learning-notes)
   - **Important:** This material extends **beyond** the COMP4432 syllabus.
   - This is my personal exploration into ML that includes additional topics (e.g., theoretical proofs) not covered in the original lectures.
+- [*Cheatsheet (PDF)*](cheatsheet/comp4434_cheatsheet.pdf)
 - [Course Homepage](https://www4.comp.polyu.edu.hk/~cskchung/COMP4432/)
   
 ---

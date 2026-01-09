@@ -1,0 +1,21 @@
+[project]
+name = "hpp"
+version = "0.1.0"
+description = "House Price Prediction Kaggle Competition"
+authors = [
+    {name = "Cylrx",email = ""}
+]
+license = {text = "MIT"}
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "autogluon[tabarena] (>=1.4.0,<2.0.0)",
+    "autogluon-tabular[tabpfn] (>=1.4.0,<2.0.0)",
+    "matplotlib (>=3.10.7,<4.0.0)",
+    "tabpfn (==2.1.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"

@@ -1,0 +1,399 @@
+seed: 618
+k_folds: 10
+verbose: true
+
+llm:
+  max_tokens: 32000
+  temperature: 1.0
+  eval_models: 
+    - "gemini-3-pro-preview"
+    - "gpt-5.2-2025-12-11"
+    - "o4-mini-2025-04-16"
+
+perturb_levels: 100
+perturb:
+    repeat: 100
+    max_noise_std_ratio: 1.0
+    max_flip_prob: 0.5
+
+classify_models: 
+    - tabpfn
+    - limix
+    - xgboost
+    - logreg
+    - rf
+    - knn
+
+# ---------------------------------------------------------------------------
+# Data Mining
+# ---------------------------------------------------------------------------
+
+mining_targets: 
+    targets: 
+        - binary
+        - logits
+        - binned_proba
+    num_bins: 4
+    bin_names:
+        - low
+        - mid-low
+        - mid-high
+        - high
+
+mining_blind_eval:
+    algorithms:
+        - subgroup
+        - rulefit
+        - arm
+    targets:
+        - binary
+        - binned_proba
+    models:
+        - "gemini-3-pro-preview"
+        - "gpt-5.2-2025-12-11"
+        - "o4-mini-2025-04-16"
+    rounds_per_model: 3
+
+subgroup_discovery:
+    top_k: 10
+    depth: 4
+
+association_rules:
+    min_support: 0.1
+    min_threshold: 0.3
+    metric: "lift"
+    top_k: 10
+    num_bins: 5
+
+rulefit:
+    tree_size: 4
+    max_rules: 30
+    include_linear: false
+    top_k: 10
+
+# ---------------------------------------------------------------------------
+# Ensembling (Classification)
+# ---------------------------------------------------------------------------
+# Exactly 3 base models are required. We grid-search two weights (w1, w2) and
+# set w3 = 1 - w1 - w2. The objective is to minimize OOF ECE_KDE.
+ensembling:
+    models:
+        - tabpfn
+        - limix
+        - logreg
+    weight_grid:
+        step: 0.02 # Step size for w1 and w2 in [0, 1]. Must divide 1.0 (e.g. 0.05).
+        N: 20 # Number of OOF rounds
+        K: 10 # Number of folds per round
+
+cluster_models:
+    - kmeans
+    - spectral
+    - ward
+    - gmm
+    - dbscan
+    - hdbscan
+    - agglomerative
+
+cluster_embeddings:
+    - none
+    - tabpfn
+
+cluster_orthogonalize: 
+    enable: true
+    order: 5
+    use_rbf: true # "order" is ignored if rbf used.
+    rbf:
+        # Kernel Ridge Regression with RBF kernel for non-linear residualization.
+        # Critical: alpha regularization prevents overfitting on n=303 samples.
+        gamma: 0.1        # RBF kernel width (1/length_scale^2). Lower = smoother.
+        alpha: 1.0        # Ridge regularization strength. Higher = more regularization.
+        # Optional: enable grid search CV to auto-tune hyperparameters (slower but safer)
+        grid_search: false
+        grid_gamma: [0.01, 0.1, 1.0]
+        grid_alpha: [0.1, 1.0, 10.0]
+        cv_folds: 5
+
+cluster_embedding_params:
+    tabpfn:
+        # n_fold=0 => vanilla embeddings; set >0 for K-fold embeddings.
+        # train_size<1 => train TabPFN on a subset, embed full X via data_source='test'.
+        train_size: 1.0
+        n_fold: 0
+        reduce: mean       # {"mean", "first"} across estimators
+        data_source: train # {"train", "test"}; use "test" when train_size<1
+        model:
+            # Keep clustering embeddings portable across machines.
+            device: auto
+            n_estimators: 1
+
+dataset:
+    label: output
+    # label: target
+    features: 
+        age: int
+        sex: cat
+        cp: cat
+        trtbps: int    # (Resting blood pressure)
+        chol: int      # (Cholesterol)
+        fbs: cat
+        restecg: cat
+        thalachh: int  # (Max heart rate)
+        exng: cat
+        oldpeak: num   # (ST depression, float)
+        slp: cat
+        caa: num
+        thall: cat
+
+        # age: int
+        # sex: cat
+        # cp: cat
+        # trestbps: int    # (Resting blood pressure)
+        # chol: int      # (Cholesterol)
+        # fbs: cat
+        # restecg: cat
+        # thalach: int  # (Max heart rate)
+        # exang: cat
+        # oldpeak: num   # (ST depression, float)
+        # slope: num
+        # ca: num
+        # thal: cat
+
+paths:
+    raw_data: data/heart_raw.csv
+    data: data/heart.csv
+    proba: data/proba.csv
+    subgroups: data/subgroup.csv
+    output: output/
+
+models:
+    logreg:
+        random_state: 618
+        max_iter: 10000
+    xgboost:
+        random_state: 618
+        n_estimators: 100
+        eval_metric: 'logloss'
+    tabpfn:
+        device: 'cuda'
+        n_estimators: 8
+        random_state: 618
+    rf:
+        criterion: 'entropy'
+        random_state: 618
+        n_estimators: 100
+    knn:
+        n_neighbors: 5
+    limix: 
+        device: 'cuda'
+        model_path: './cache/LimiX-16M.ckpt'
+        inference_config: './LimiX/config/cls_default_16M_retrieval.json'
+    kmeans:
+        n_clusters: 2
+        random_state: 618
+    dbscan:
+        eps: 1.58
+        min_samples: 3
+    hdbscan:
+        min_cluster_size: 2
+        min_samples: 19
+    agglomerative:
+        n_clusters: 2
+        linkage: "average"
+        metric: "euclidean"
+    ward:
+        n_clusters: 2
+        linkage: "ward"
+        metric: "euclidean"
+    gmm:
+        n_components: 2
+        random_state: 618
+        covariance_type: "diag"
+    spectral:
+        n_clusters: 2
+        random_state: 618
+    optics:
+        min_samples: 5
+        cluster_method: "xi"
+        xi: 0.05
+
+# Intra-class clustering runs on y==0 / y==1 subsets, so "2 clusters" configs
+# tuned for direct (binary) clustering are often not appropriate.
+models_intra:
+    kmeans:
+        n_clusters: 4
+        random_state: 42
+    spectral:
+        n_clusters: 4
+        random_state: 42
+    ward:
+        n_clusters: 4
+        linkage: "ward"
+        metric: "euclidean"
+    gmm:
+        n_components: 4
+        random_state: 42
+        covariance_type: "diag"
+    agglomerative:
+        n_clusters: 4
+        linkage: "average"
+        metric: "euclidean"
+    dbscan:
+        eps: 1.58
+        min_samples: 3
+    hdbscan:
+        min_cluster_size: 2
+        min_samples: 19
+
+plots:
+    colors:
+        - "#810f7c"
+        - "#9ebcda"
+        - "#8856a7"
+        - "#bfd3e6"
+        - "#8c96c6"
+    rcParams:
+        font.family: "sans-serif"
+        font.sans-serif: ["Arial", "DejaVu Sans", "Helvetica", "sans-serif"]
+        font.size: 10
+        axes.titlesize: 11
+        axes.labelsize: 10
+        xtick.labelsize: 9
+        ytick.labelsize: 9
+        legend.fontsize: 9
+        
+        # Clean look
+        axes.spines.top: false
+        axes.spines.right: false
+        axes.grid: true
+        grid.alpha: 0.3
+        grid.linestyle: "--"
+        grid.color: "#b0b0b0"
+        
+        # Legend
+        legend.frameon: false
+        legend.loc: "best"
+        
+        # Figure
+        figure.titlesize: 13
+        figure.dpi: 300
+        figure.figsize: [6, 4]
+
+        lines.linewidth: 2.5
+    
+    err_band_alpha: 0.15
+    err_band_stdev_factor: 0.18
+
+    perturn_groupby_models: 
+        ignore_list: 
+            #- "xgboost"
+            #- "rf"
+
+    eda:
+        # Which dataset to use for EDA: cfg.paths[<data_path_key>]
+        data_path_key: data
+        out_dir: output/eda/
+        files:
+            categorical: eda_categorical_after.png
+            numeric: eda_numeric_after.png
+
+        # Binary label (0/1) styling; colors are indices into plots.colors
+        label:
+            values: [0, 1]
+            color_index:
+                0: 0
+                1: 1
+            legend:
+                0: "output=0"
+                1: "output=1"
+
+        # Figure sizing is computed as (col_width*n_cols, row_height*n_rows)
+        layout:
+            figsize:
+                col_width: 2.6
+                row_height: 2.2
+            constrained_layout: true
+
+        # Shared bin outline style (categorical + numeric)
+        style:
+            bin_edgecolor: "#000000"
+            bin_linewidth: 0.6
+
+        categorical:
+            n_cols: 4
+            normalize: count          # {"count", "within_label"}
+            sort_categories: true
+            axis:
+                pad: 0.6              # xlim padding in "category slots"
+            bar:
+                width_ratio: 0.80     # total grouped width within a 1.0 slot
+                alpha: 0.75
+            xtick:
+                rotation: 0
+                ha: "center"
+            legend:
+                enable: true
+                only_first_subplot: true
+            titles:
+                figure: "Categorical feature distributions by output"
+                subplot_fmt: "{feature}"
+
+        numeric:
+            n_cols: 4
+            normalize: density        # {"density", "count"}
+            bins:
+                method: "fd"          # {"fd", "auto", "sturges", ...} or an integer
+                min_bins: 6
+                max_bins: 40
+            hist:
+                width_ratio: 0.90
+                alpha: 0.75
+            kde:
+                enable: true
+                bw_method: "scott"    # str | float, passed to scipy.stats.gaussian_kde
+                grid_size: 256
+                linewidth: 2.0
+                alpha: 1.0
+            x:
+                pad_ratio: 0.02
+            legend:
+                enable: true
+                only_first_subplot: true
+            titles:
+                figure: "Numeric feature distributions by output"
+                subplot_fmt: "{feature}"
+
+    cluster_report:
+        figsize:
+            col_width: 2.0    # Width of each subplot column (inches)
+            row_height: 2.1   # Height of each subplot row (inches)
+        dim_reduction:
+            # Dim reduction methods used for visualization rows (order matters).
+            # All parameters must live here; report code must not hardcode any DR args.
+            methods:
+                - name: pca
+                  label: PCA
+                  params:
+                      n_components: 2
+                      random_state: 618
+                - name: umap
+                  label: UMAP
+                  params:
+                      n_components: 2
+                      random_state: 618
+                      n_neighbors: 30
+                      min_dist: 0.5
+                - name: tsne
+                  label: t-SNE
+                  params:
+                      n_components: 2
+                      random_state: 618
+                      perplexity: 50
+        scatter:
+            s: 10.5             # Size of the scatter point
+            alpha: 1.0        # Opacity of points (0.0 to 1.0)
+            linewidths: 1     # Width of point edge lines (0 for no edge)
+        colors:
+            other: "#b0b0b0"  # Color for noise or non-binary labels
+        layout:
+            pad_factor: 0.20  # Padding ratio for axis limits (to avoid points touching borders)

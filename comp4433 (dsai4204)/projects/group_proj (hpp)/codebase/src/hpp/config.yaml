@@ -1,0 +1,167 @@
+seed: 42
+grid_mode: true
+
+dataset:
+    label: SalePrice
+    unwanted_labels: [Id]
+
+paths:
+    log: saves/log
+    model: saves/models
+    train_data: data/train.csv
+    test_data: data/test.csv
+    eval_data: data/holdout.csv
+    submission_template: data/sample_submission.csv
+    submission_output: saves/submission
+
+experiments:
+    baseline:
+        feat:
+            # pre-generators
+            knn_impute_engineer: false
+            fill_na_engineer: false
+            yeo_johnson_engineer: false
+            zero_center_engineer: false
+            customized_engineer: false
+            # generators
+            categorical_engineer: false
+            datetime_engineer: false
+            # post-generators
+            drop_unique_engineer: false
+            onehot_engineer: false
+
+        init:
+            label: SalePrice
+            problem_type: regression
+            eval_metric: root_mean_squared_error
+            verbosity: 2
+            log_to_file: true
+            log_file_path: auto
+        fit:
+            # Let presets control everything critical; do not set num_bag_folds/num_stack_levels/hyperparameters here
+            presets: good_quality
+            time_limit: null
+            num_gpus: 1
+            num_cpus: 20
+            hyperparameters: # overrides tree-based models to use CPU-only
+                GBM: { ag_args_fit: { num_gpus: 0 } }
+                XGB: { ag_args_fit: { num_gpus: 0 } }
+                CAT: { ag_args_fit: { num_gpus: 0 } }
+                RF: { ag_args_fit: { num_gpus: 0 } }
+                XT: { ag_args_fit: { num_gpus: 0 } }
+                LR: { ag_args_fit: { num_gpus: 0 } }
+        other:
+            log1p: true
+
+    # dynamic stacking in AG is slow, due to CPU-only
+    # thus, we run dynamic stacking manually via `load_model`
+    run_overlays:
+        [bag8_stack5, bag_sets3, dy_stack_off, no_ens, no_tree, use_log1p, exq]
+
+    run_grid:
+        feat:
+            [
+                default,
+                fe_basic,
+                fe_knn,
+                fe_custom,
+                fe_onehot,
+                fe_numeric,
+                fe_full,
+            ]
+        stacking: [auto_stack]
+        bagset: [bag_set1]
+        dynstack: [dy_stack_off]
+        ens: [use_ens]
+        model_family: [default]
+        label_transform: [use_log1p]
+        quality: [beq] # applied after model_family
+
+    overlays:
+        # --------------------------
+        # Feature engineering
+        # --------------------------
+        fe_basic: { feat: {
+                        categorical_engineer: false, # worsens performance for some reason
+                        datetime_engineer: true,
+                        fill_na_engineer: true,
+                        drop_unique_engineer: true,
+                    } }
+        fe_knn: { feat: { knn_impute_engineer: true } }
+        fe_custom: { feat: { customized_engineer: true } }
+        fe_onehot:
+            { feat: { onehot_engineer: true, categorical_engineer: true } }
+        fe_numeric:
+            { feat: { yeo_johnson_engineer: true, zero_center_engineer: true } }
+        fe_full:
+            {
+                feat:
+                    {
+                        categorical_engineer: true,
+                        datetime_engineer: true,
+                        fill_na_engineer: true,
+                        drop_unique_engineer: true,
+                        yeo_johnson_engineer: true,
+                        zero_center_engineer: true,
+                        knn_impute_engineer: true,
+                        customized_engineer: true,
+                    },
+            }
+
+        # --------------------------
+        # Quality presets (mutually exclusive)
+        # --------------------------
+        mq: { fit: { presets: medium_quality } }
+        goq: { fit: { presets: good_quality } }
+        hiq: { fit: { presets: high_quality } }
+        beq: { fit: { presets: best_quality } }
+        exq: { fit: { presets: extreme_quality, hyperparameters: null } } # GPU
+        tba: { fit: { presets: tabarena } }
+
+        # --------------------------
+        # Bagging / stacking structure
+        # --------------------------
+        auto_stack: { fit: { auto_stack: true } }
+        no_stack: { fit: { num_bag_folds: 0, num_stack_levels: 0 } }
+        bag5_stack1: { fit: { num_bag_folds: 5, num_stack_levels: 1 } } # 5x time
+        bag5_stack2: { fit: { num_bag_folds: 5, num_stack_levels: 2 } } # 10x time
+        bag8_stack3: { fit: { num_bag_folds: 8, num_stack_levels: 3 } } # 24x time
+        bag8_stack5: { fit: { num_bag_folds: 8, num_stack_levels: 5 } } # 40x time
+        bag_sets3: { fit: { num_bag_sets: 3 } } # 3x time
+        bag_sets2: { fit: { num_bag_sets: 2 } } # 2x time
+        bag_set1: { fit: { num_bag_sets: 1 } } # 1x time
+
+        # --------------------------
+        # Dynamic stacking and weighted ensembling ablations
+        # --------------------------
+        dy_stack_off: { fit: { dynamic_stacking: false } }
+        dy_stack_on: { fit: { dynamic_stacking: true, num_gpus: 0 } } # dynstack doesn't support GPU apparently
+        no_ens: { fit: { fit_weighted_ensemble: false } }
+        use_ens:
+            {
+                fit:
+                    {
+                        fit_weighted_ensemble: true,
+                        full_weighted_ensemble_additionally: true,
+                    },
+            }
+
+        # --------------------------
+        # Model-family ablations
+        # --------------------------
+        only_gbm: { fit: { included_model_types: [GBM] } }
+        gbm_cat_xgb: { fit: { included_model_types: [GBM, CAT, XGB] } }
+        only_linear: { fit: { included_model_types: [LR] } }
+        only_mlp: { fit: { included_model_types: [NN_TORCH] } }
+        no_tree: { fit: { excluded_model_types: [GBM, XGB, CAT, RF, XT] } }
+        only_tree: { fit: { included_model_types: [GBM, XGB, CAT, RF, XT] } }
+        only_tabpfn: { fit: { included_model_types: [TABPFNV2] } }
+        only_nn: { fit: { included_model_types: [NN_TORCH, FASTAI] } }
+
+        # --------------------------
+        # Label transform ablation
+        # --------------------------
+        use_log1p: { other: { log1p: true } }
+        no_log1p: { other: { log1p: false } }
+
+        default: {} # no change
