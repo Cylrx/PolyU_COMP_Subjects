@@ -1,0 +1,31 @@
+[project]
+name = "comp4436-aiot"
+version = "0.1.0"
+description = "COMP4436 AIoT Streaming Simulation System"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.10.8",
+    "rich",
+    "scienceplots>=2.2.1",
+]
+
+[project.optional-dependencies]
+ml = [
+    "torch==2.11.0+cu128",
+    "torchvision==0.26.0+cu128",
+    "thop",
+    "torch-pruning",
+    "onnx>=1.18.0",
+    "onnxruntime-gpu",
+    "onnxscript>=0.6.2",
+]
+
+[dependency-groups]
+dev = ["pytest"]
+
+[[tool.uv.index]]
+url = "https://download.pytorch.org/whl/cu128"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
